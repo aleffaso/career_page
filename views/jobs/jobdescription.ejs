@@ -1,0 +1,47 @@
+<!--Header-->
+<%- include("../partials/header.ejs") %>
+<!--Navbar-->
+<%- include("../partials/navbar_job.ejs") %>
+<section class="about-section text-center" id="about">
+<div class="container px-4 px-lg-5 ">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-lg-8">
+            <div class="text-md-start">
+                <h3 class="text-gray mb-4 text-indent"><p>Área de atuação: <%= jobs.area %></p></h3>
+
+                <p class="text-indent">A Zapay veio para revolucionar o jeito de pagar os débitos veiculares, entregando mais liberdade, mais tempo e menos burocracia para os proprietários de veículos. Com esse propósito, desde 2017, já ajudamos a regularizar quase 500 mil veículos, tivemos mais de 4 milhões de consultas de multas, IPVA e licenciamento em nossa base e conseguimos o credenciamento de 25 DETRAN’s do país.<br><br>
+
+
+                Hoje nosso objetivo é conseguir entregar mais agilidade e desburocratizar ainda mais processos para os condutores. Somos uma fintech que está escrevendo seu novo capítulo no mercado. Após recebermos um aporte liderado pela DOMO Invest, nossa nova parceria, o sonho grande agora é criar o maior ecossistema veicular do mercado de auto no Brasil. Quer fazer parte dessa inovação?</p>
+                <br>
+
+                <h3 class="text-gray mb-4"><p>Vaga: <%= jobs.title %></p></h3>
+
+                <h3 class="text-gray mb-4">Como será o dia a dia do(a) futuro(a) <%= jobs.title %>:</h3>
+                <p class="text-indent"><%= jobs.day%></p>
+
+                <h3 class="text-gray mb-4">Quais são as principais habilidades que você deve ter: </h3>
+                <p class="text-indent"><%= jobs.ability %></p>
+
+                <h3 class="text-gray mb-4">Quais são os diferenciais que podem te ajudar: </h3>
+                <p class="text-indent"><%= jobs.difference %></p>
+
+                <h3 class="text-gray mb-4">Benefícios: </h3>
+                <ul>
+                    <li>Cartão flash para uso flexível;</li>
+                    <li>Flexibilidade de férias;</li>
+                    <li>Day off no aniversário;</li>
+                </ul>
+
+                <h3 class="text-gray mb-4">Como se candidatar?</h3>
+                <p class="text-indent">Antes de se candidatar, é importante verificar se você atende a todos os requisitos essenciais da posição. Caso atenda, basta encaminhar o seu CV para o e-mail: people@usezapay.com.br com o assunto "<%= jobs.title %>".</p>
+                </div>                  
+        </div>
+    </div>
+</div>
+</section>
+
+<!--Contact Information-->
+<%- include("../sections/section05_footer.ejs") %>
+<!--Footer -->
+<%- include("../partials/footer.ejs") %>
