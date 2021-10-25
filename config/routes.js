@@ -2,7 +2,6 @@ const express = require("express");
 const routes = express.Router();
 const jobs = require("./database/Jobs");
 
-
 //Render main page
 routes.get('/', (req, res) =>{
     res.render('index');
