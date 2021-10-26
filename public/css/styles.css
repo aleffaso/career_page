@@ -632,6 +632,23 @@ progress {
   color: #6c757d;
 }
 
+.container-gallery img{
+  display: inline-flex;
+  width: 200px;
+  height: auto;
+}
+
+.container-gallery-1 img{
+  display: inline-flex;
+  width: 400px;
+  height: auto;
+}
+.container-gallery-culture img{
+  display:inline-grid;
+  width: auto;
+  height: 300px;
+}
+
 .container,
 .container-fluid,
 .container-xxl,
@@ -3001,7 +3018,7 @@ textarea.form-control-lg {
   display: inline-block;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #191919;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -3066,13 +3083,13 @@ textarea.form-control-lg {
 
 .btn-secondary {
   color: #fff;
-  background-color: #7464a1;
-  border-color: #7464a1;
+  background-color: rgba(248,31,109,0.9);
+  border-color: rgba(248,31,109,0.9);
 }
 .btn-secondary:hover {
   color: #fff;
-  background-color: #635589;
-  border-color: #5d5081;
+  background-color: rgba(248,31,109,0.5);
+  border-color: rgba(248,31,109,0.5);
 }
 .btn-check:focus + .btn-secondary, .btn-secondary:focus {
   color: #fff;
@@ -7649,6 +7666,16 @@ textarea.form-control-lg {
   padding-left: 3rem !important;
 }
 
+.px-10 {
+  padding-right: 6rem !important;
+  padding-left: 6rem !important;
+}
+
+.px-20 {
+  padding-right: 12rem !important;
+  padding-left: 12rem !important;
+}
+
 .py-0 {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
@@ -7849,6 +7876,7 @@ textarea.form-control-lg {
 
 .text-indent {
   text-indent: 1cm;
+  text-align: justify;
 }
 
 .text-start {
@@ -8570,6 +8598,10 @@ textarea.form-control-lg {
     margin-right: 3rem !important;
   }
 
+  .me-sm-24 {
+    margin-right: 25rem !important;
+  }
+
   .me-sm-auto {
     margin-right: auto !important;
   }
@@ -8624,6 +8656,10 @@ textarea.form-control-lg {
 
   .ms-sm-5 {
     margin-left: 3rem !important;
+  }
+
+  .ms-sm-24 {
+    margin-left: 25rem !important;
   }
 
   .ms-sm-auto {
@@ -11635,6 +11671,14 @@ body {
 .projects-section {
   padding: 10rem 0;
 }
+
+.projects-section-culture {
+  padding-top: 10rem;
+}
+
+.projects-section-footer {
+  padding: 0rem 0;
+}
 .projects-section .featured-text {
   padding: 2rem;
 }
@@ -11728,5 +11772,17 @@ body {
 }
 
 .footer {
-  padding: 5rem 0;
+  padding: 10rem;
+}
+
+.grid-container{
+  display:grid;
+  grid-template-columns: 200px 200px 200px;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 976px) {
+  .grid-container {
+    grid-template-columns: 100px 100px 100px;
+  }
 }
