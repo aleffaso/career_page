@@ -37,7 +37,7 @@ app.get('/', (req, res) =>{
 
 app.get("/vagas", (req, res) => {
     jobs.findAll({raw: true, order:[
-        ['id', 'DESC'] //Order inverted
+        ['area', 'ASC'] //Order inverted
     ]}).then(jobs => {// As well as SELCT * FROM questions 
         res.render("vagas",{
             jobs: jobs //Show all jobs at the job page

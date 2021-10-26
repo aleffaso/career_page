@@ -44,6 +44,13 @@
 - The name of the `new_schema` must be `jobdescription`
 <hr>
 
+- After installing MySQL don't forget to change `process.env.DATABASE_PASSWORD` with your `Root` credentials at `database/database.js`  as the picture below <br><br>
+
+
+<p align="center">
+  <img  src="public/assets/src/img7.png">
+</p> <br>
+
 ## 3 - Running the application
 
 - Run: `npm install`

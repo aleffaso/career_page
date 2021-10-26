@@ -12,13 +12,21 @@
         </div>
     </div>
 
-    <% jobs.forEach(jobs => { %>
     <div class="container px-20">
         <hr>
         <div class="grid-container text-center">
-            <div><h2 class="text-gray "><%= jobs.area %> </h2></div>
-            <div><h5 class="text-gray "><%= jobs.title %></h5></div>
-            <div><h2><a class="btn-sm btn-secondary" href="jobdescription/<%=jobs.id%>">Applicar para a vaga</a></h2></div>
+            <div><h2 class="text-dark">Área</h2></div>
+            <div><h5 class="text-dark">Vaga</h5></div>
+        </div>
+    </div> 
+
+    <% jobs.forEach(jobs => { %>
+    <div class="container px-20">
+        <hr>
+        <div class="grid-container text-center py-4">
+            <div><h2 class="text-gray"><%= jobs.area %> </h2></div>
+            <div><h5 class="text-gray"><%= jobs.title %></h5></div>
+            <div><h2><a class="btn-sm btn-secondary" href="jobdescription/<%=jobs.id%>">Aplicar para a vaga</a></h2></div>
         </div>
     </div> 
     <% }) %>
