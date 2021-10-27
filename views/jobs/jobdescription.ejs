@@ -2,6 +2,8 @@
 <%- include("../partials/header.ejs") %>
 <!--Navbar-->
 <%- include("../partials/navbar_job.ejs") %>
+
+
 <section class="about-section text-center" id="about">
 <div class="container px-4 px-lg-5 ">
     <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -16,22 +18,24 @@
                 <h3 class="text-dark mb-2">Vaga: <%= jobs.title %></h3><br>
 
                 <h3 class="text-dark mb-2">Como será o dia a dia do(a) futuro(a) <%= jobs.title %>:</h3>
-                <ul>
-                    <%- String(jobs.day).replace(/;/g, ';<br>') %><br><br>
+                <ul> 
+                    <%- String(jobs.day).replace(/^/,"<li>").replace(/;/g, ';<li>') %> </li>
                 </ul>
+
                 <h3 class="text-dark mb-2">Quais são as principais habilidades que você deve ter: </h3>
                 <ul>
-                    <%- String(jobs.ability).replace(/;/g, ';<br>')  %><br><br>
+                    <%- String(jobs.ability).replace(/^/,"<li>").replace(/;/g, ';<li>') %> </li>
                 </ul>    
+
                 <h3 class="text-dark mb-2">Quais são os diferenciais que podem te ajudar: </h3>
                 <ul>
-                    <%- String(jobs.difference).replace(/;/g,";<br>") %><br>
-                </ul>    
+                    <%- String(jobs.difference).replace(/^/,"<li>").replace(/;/g, ';<li>') %> <br> 
+                </ul>   
                 <h3 class="text-dark mb-2">Benefícios: </h3>
                 <ul>
-                Cartão flash para uso flexível<br>
-                Flexibilidade de férias<br>
-                Day off no aniversário<br><br>
+                    <li>Cartão flash para uso flexível;</li>
+                    <li>Flexibilidade de férias;</li>
+                    <li>Day off no aniversário;</li>
                 </ul>
                 
                 <h3 class="text-dark mb-4">Como se candidatar?</h3>

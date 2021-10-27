@@ -1,7 +1,7 @@
 const Sequelize = require("sequelize");
 const connection = require("./database");
 
-const Jobs = connection.define('jobs',{ //Create database with "question" name
+const Jobs = connection.define('jobs',{ //Create database with "Jobs" name
     area:{
         type: Sequelize.STRING,
         allowNull: false //Need to fill the field
