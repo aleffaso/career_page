@@ -53,6 +53,7 @@
   --bs-pink-rgb: 255, 4, 100;
   --bs-dark-rgb: 25, 25, 25;
   --bs-gray-rgb: 102, 102, 102;
+  --bs-pink-rgb: 248, 31, 109;
   --bs-black-rgb: 0, 0, 0;
   --bs-white-rgb: 255, 255, 255;
   --bs-white-rgb: 255, 255, 255;
@@ -158,6 +159,10 @@ h6, .h6 {
   font-size: 1rem;
 }
 
+h7, .h7 {
+  font-size: 0.75rem;
+}
+
 p {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -241,11 +246,11 @@ sup {
 }
 
 a {
-  color: #64a19d;
+  color: #6c757d;
   text-decoration: underline;
 }
 a:hover {
-  color: #50817e;
+  color: #6c757d;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -7974,9 +7979,15 @@ textarea.form-control-lg {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;
 }
+
 .text-gray {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-gray-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-pink {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-pink-rgb), var(--bs-text-opacity)) !important;
 }
 
 .text-black {
