@@ -25,6 +25,6 @@ app.use(bodyParser.json());
 app.use(routes);
 
 //Server open in 3000 port
-app.listen(3000,() =>{ 
+app.listen(3000,() => { 
     console.log("Server Running");
 });

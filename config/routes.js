@@ -11,7 +11,7 @@ routes.get("/", (req, res) =>{
 routes.get("/vagas", (req, res) => {
     jobs.findAll({raw: true, order:[
         ['area', 'ASC'] //DESC for order inverted
-    ]}).then(jobs => {// As well as SELCT * FROM questions ç
+    ]}).then(jobs => {// As well as SELCT * FROM jobdescription 
         res.render("vagas",{
             jobs: jobs //Show all jobs at the job page
         });
@@ -24,7 +24,7 @@ routes.get("/createjob", (req,res) => {
 });
 
 //Show survey to save jobs
-routes.post("/savejob", (req,res) => { //Saving the job descrpitions related to createjob.js
+routes.post("/savejob", (req,res) => { //Saving the job descriptions related to createjob.js
     var area = req.body.area;
     var title = req.body.title;
     var day = req.body.day;
@@ -42,7 +42,7 @@ routes.post("/savejob", (req,res) => { //Saving the job descrpitions related to 
 });
 
 //show job description page
-routes.get("/jobdescription/:id",(req,res) => { // Search for questions by id
+routes.get("/jobdescription/:id",(req,res) => { // Search for job by id
     var id = req.params.id;
     jobs.findOne({
         where: {id: id} //Compare id from table and parameter

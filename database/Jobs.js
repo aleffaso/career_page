@@ -24,6 +24,6 @@ const Jobs = connection.define('jobs',{ //Create database with "Jobs" name
     }
 });
 
-Jobs.sync({force:false}).then(() => {}); //In case of database "question" does not exist, it forces to create it
+Jobs.sync({force:false}).then(() => {}); //In case of database "Jobs" does not exist, it forces to create it
 
 module.exports = Jobs; 
