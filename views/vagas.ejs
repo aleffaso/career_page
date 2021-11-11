@@ -5,33 +5,32 @@
 
 <section class="projects-section bg-white" id="jobs">
     <div class="container px-4 px-lg-5 ">
-        <div class="row gx-4 gx-lg-5 ">
-            <div class="col-lg-8">
-                <h1 class="text-gray mb-4 text-center">Confira nossas vagas</h1>
-            </div>
-        </div>
+        <h1 class="text-pink mb-4 text-center"><b>Confira nossas vagas</b></h1>
     </div>
 
-    <div class="container">
-        <hr>
-        <div class="row text-center">
-            <div class="col-sm"><h2 class="text-dark">Área</h2></div>
-            <div class="col-sm"><h2 class="text-dark">Vaga</h2></div>
-            <div class="col-sm"><h5 class="text-dark"></h5></div>
-        </div>
-    </div> 
+    <table class="container-table table table-bordered table-hover mb-5">
+        <thead>
+            <tr>
+                <th scope="col"><h2 class="text-pink"><b>Área</b></h2></th>
+                <th scope="col"><h2 class="text-gray"><b>Vaga</b></h2></th>
+                <th scope="col"><h2 class="text-gray"><b></b></h2></th>
+            </tr>
+        </thead>
 
-    <% jobs.forEach(jobs => { %>
-    <div class="container">
-        <hr>
-        <div class="row text-center py-4">
-            <div class="col-sm"><h2 class="text-gray"><%= jobs.area %> </h2></div>
-            <div class="col-sm"><h5 class="text-gray"><%= jobs.title %> </h5></div>
-            <div class="col-sm"><h2><a class="btn-sm btn-secondary" href="jobdescription/<%=jobs.id%>">Aplicar para a vaga</a></h2></div>
-        </div>
-    </div> 
-    <% }) %>
+        <tbody>
+            <% jobs.forEach(jobs => { %>
+            <tr>
+                <td><%= jobs.area %></td>
+                <td><%= jobs.title %></td>
+                <td><a class="btn-sm btn-secondary" href="jobdescription/<%=jobs.id%>">Aplicar</a></td>
+            </tr>   
+            <% }) %> 
+        </tbody>
+    </table>
 </section>
+
+
+
 
 <!--Contact Information-->
 <%- include("sections/section06_footer.ejs") %>

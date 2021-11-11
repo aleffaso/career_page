@@ -4,51 +4,75 @@
 <%- include("../partials/navbar_job.ejs") %>
 
 
-<section class="about-section text-center" id="about">
-<div class="container px-4 px-lg-5 ">
-    <div class="row gx-4 gx-lg-5 justify-content-center">
-        <div class="col-lg-8">
-            <div class="text-md-start ">
-                <h3 class="text-dark mb-4 text-indent">Área de atuação: <%= jobs.area %></h3>
-                <hr>
-                <div class="text-indent">A Zapay veio para revolucionar o jeito de pagar os débitos veiculares, entregando mais liberdade, mais tempo e menos burocracia para os proprietários de veículos. Com esse propósito, desde 2017, já ajudamos a regularizar quase 500 mil veículos, tivemos mais de 4 milhões de consultas de multas, IPVA e licenciamento em nossa base e conseguimos o credenciamento de 25 DETRAN’s do país.</div>
-                <br>
-                <div  class="text-indent "> Hoje nosso objetivo é conseguir entregar mais agilidade e desburocratizar ainda mais processos para os condutores. Somos uma fintech que está escrevendo seu novo capítulo no mercado. Após recebermos um aporte liderado pela DOMO Invest, nossa nova parceria, o sonho grande agora é criar o maior ecossistema veicular do mercado de auto no Brasil. Quer fazer parte dessa inovação?</div>
-                <br><br>
-                <h3 class="text-dark mb-2">Vaga: <%= jobs.title %></h3><br>
+<section class="bg-white">
+    <div class="container px-4">
+        <div class="row justify-content-center">
+            <div class="mt-10">
+                <h3 class="text-pink text-center">Área de atuação</h3>
+                <h3 class="text-pink text-center"><b><%= jobs.area %></b></h3>
+            </div>
+            <div class="container-beige mb-4">
+                <h5>
+                    <p class="text-indent">A Zapay veio para revolucionar o jeito de pagar os débitos veiculares, entregando mais liberdade, mais tempo e menos burocracia para os proprietários de veículos. Com esse propósito, desde 2017, já ajudamos a regularizar quase 500 mil veículos, tivemos mais de 4 milhões de consultas de multas, IPVA e licenciamento em nossa base e conseguimos o credenciamento de 25 DETRAN’s do país.</p>
+                    <br>
+                    <p  class="text-indent "> Hoje nosso objetivo é conseguir entregar mais agilidade e desburocratizar ainda mais processos para os condutores. Somos uma fintech que está escrevendo seu novo capítulo no mercado. Após recebermos um aporte liderado pela DOMO Invest, nossa nova parceria, o sonho grande agora é criar o maior ecossistema veicular do mercado de auto no Brasil. Quer fazer parte dessa inovação?<p>
+                </h5>
+            </div>
 
-                <h3 class="text-dark mb-2">Como será o dia a dia do(a) futuro(a) <%= jobs.title %>:</h3>
-                <ul> 
-                    <%- String(jobs.day).replace(/^/,"<li>").replace(/;/g, ';<li>') %> </li>
-                </ul>
+            <div class="container mb-2">
+               <!-- <h3 class="text-pink text-center">Vaga</h3>-->
+                <h3 class="text-pink text-center"><b><%= jobs.title %></b></h3>
+            </div>
+            
+            
+            <div class="container-beige mb-4">
+                <h3 class="text-dark mb-4 px-4">Como será seu dia-a-dia:</h3>
+                <div class="px-6">
+                    <ul> 
+                        <%- String(jobs.day).replace(/^/,"<li>").replace(/;/g, ';<li>') %> </li>
+                    </ul>
+                </div>  
+            </div>
 
-                <h3 class="text-dark mb-2">Quais são as principais habilidades que você deve ter: </h3>
-                <ul>
-                    <%- String(jobs.ability).replace(/^/,"<li>").replace(/;/g, ';<li>') %> </li>
-                </ul>    
+            <div class="container-beige mb-4">
+                <h3 class="text-dark mb-4 px-4">Quais são as principais habilidades que você deve ter: </h3>
+                <div class="px-6">
+                    <ul>
+                        <%- String(jobs.ability).replace(/^/,"<li>").replace(/;/g, ';<li>') %> </li>
+                    </ul> 
+                </div>  
+            </div>
 
-                <h3 class="text-dark mb-2">Quais são os diferenciais que podem te ajudar: </h3>
-                <ul>
-                    <%- String(jobs.difference).replace(/^/,"<li>").replace(/;/g, ';<li>') %> <br> 
-                </ul>   
-                <h3 class="text-dark mb-2">Benefícios: </h3>
-                <ul>
-                    <li>Cartão flash para uso flexível;</li>
-                    <li>Flexibilidade de férias;</li>
-                    <li>Day off no aniversário;</li>
-                </ul>
-                
-                <h3 class="text-dark mb-4">Como se candidatar?</h3>
-                <p class="text-indent">Antes de se candidatar, é importante verificar se você atende a todos os requisitos essenciais da posição. Caso atenda, basta encaminhar o seu CV para o e-mail: <strong>people@usezapay.com.br</strong> com o assunto "<%= jobs.title %>".</p>
+            <div class="container-beige mb-4">
+                <h3 class="text-dark mb-4 px-4">Quais são os diferenciais que podem te ajudar: </h3>
+                <div class="px-6">
+                    <ul>
+                        <%- String(jobs.difference).replace(/^/,"<li>").replace(/;/g, ';<li>') %> <br> 
+                    </ul>   
+                </div>  
+            </div>
 
-                <div class="text-center mb-6">
-                    <a class="btn btn-primary" href="/vagas">Ver mais vagas</a>
-                </div>
+            <div class="container-beige mb-4">
+                <h3 class="text-dark mb-4 px-4">Benefícios: </h3>
+                <div class="px-6">
+                    <ul>
+                        <li>Cartão flash para uso flexível;</li>
+                        <li>Flexibilidade de férias;</li>
+                        <li>Day off no aniversário;</li>
+                    </ul>
+                </div>  
+            </div>
 
-            </div>                  
+            <div class="container px">
+                <h3 class="text-dark mb-4 text-center">Como se candidatar?</h3>
+                <p class="text-center">Antes de se candidatar, é importante verificar se você atende a todos os requisitos essenciais da posição.<br> Caso atenda, basta encaminhar o seu CV para o e-mail: <strong>people@usezapay.com.br</strong> com o assunto "<%= jobs.title %>".</p>
+            </div>
+
+            <div class="mb-6 mt-4 text-center">
+                <a class="btn-job-2 text-pink" href="/vagas">Visualizar mais vagas</a>
+            </div>
         </div>
     </div>
-</div>
 </section>
 
 <!--Contact Information-->

@@ -636,27 +636,6 @@ progress {
   color: #6c757d;
 }
 
-.container-gallery img{
-  display: inline-flex;
-  width: 200px;
-  height: auto;
-}
-
-.container-gallery-1 img{
-  display: inline-flex;
-  width: 400px;
-  height: auto;
-}
-.container-gallery-culture img{
-  display:inline-grid;
-  width: auto;
-  height: 400px;
-}
-.container-gallery-culture-2 img{
-  display:inline-grid;
-  width: 400px;
-  height: auto;
-}
 
 .container,
 .container-fluid,
@@ -3054,6 +3033,9 @@ textarea.form-control-lg {
 }
 .btn-job:hover {
   color: rgba(255,255,255);
+}
+.btn-job-2:hover {
+  color: rgba(234,51,99);
 }
 .btn-check:focus + .btn, .btn:focus {
   outline: 0;
@@ -7537,6 +7519,10 @@ textarea.form-control-lg {
   margin-top: 6rem !important;
 }
 
+.mt-10 {
+  margin-top: 10rem !important;
+}
+
 
 .mt-auto {
   margin-top: auto !important;
@@ -11675,6 +11661,17 @@ body {
   text-decoration:none;
 }
 
+.btn-job-2 {
+  background-color: transparent;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  letter-spacing: 0.05rem;
+  border-style: solid;
+  border-color: pink;
+  border-radius: 5px; 
+  text-decoration:none;
+}
+
 .masthead {
   position: relative;
   width: 100%;
@@ -11858,6 +11855,16 @@ body {
   background-color: rgba(244,243,243);
   height: 100%;
   padding: 3rem;
+  border-radius: 10px; 
+}
+
+.container-table{
+  text-align: center;
+  background-color: rgba(244,243,243);
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  padding: 3rem 3rem;
   border-radius: 10px; 
 }
 
