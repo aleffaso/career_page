@@ -1,11 +1,28 @@
 <section class="projects-section bg-white" id="apply">
     <div class="container px-4 px-lg-5 ">
-        <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="text-center">
-                    <h1 class="text-gray mb-5">Faça parte da nossa história!</h1>
-                    <a class="btn btn-primary" href="/vagas">Ver vagas</a>
+                    <h1 class="text-pink mb-5"><b>Vagas abertas</b></h1>
                 </div>
             </div>
         </div>
+    </div>
+
+    <table class="container table table-hover">
+        <thead>
+            <tr>
+                <th scope="col"><h2 class="text-pink"><b>Área</b></h2></th>
+                <th scope="col"><h2 class="text-gray"><b>Vaga</b></h2></th>
+            </tr>
+        </thead>
+        <tbody>
+            <% jobs.forEach(jobs => { %>
+            <tr>
+                <td><%= jobs.area %></td>
+                <td><%= jobs.title %></td>
+            </tr>   
+            <% }) %> 
+        </tbody>
+    </table>
 </section>

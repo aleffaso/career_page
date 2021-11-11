@@ -4,7 +4,13 @@ const jobs = require("../database/Jobs");
 
 //Render main page
 routes.get("/", (req, res) =>{
-    res.render("index");
+    jobs.findAll({raw: true, order:[
+        ['area', 'ASC'] //DESC for order inverted
+    ]}).then(jobs => {// As well as SELCT * FROM jobdescription 
+        res.render("index",{
+            jobs: jobs //Show all jobs at the job page
+        });
+    }); 
 });
 
 //Show job data
@@ -17,6 +23,7 @@ routes.get("/vagas", (req, res) => {
         });
     });  
 });
+
 
 //Create job route
 routes.get("/createjob", (req,res) => {
