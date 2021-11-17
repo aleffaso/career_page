@@ -1,19 +1,17 @@
 <section class="bg-white" id="apply">
-    <div class="container px-30 px-lg-5 ">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="text-center">
-                    <h1 class="text-pink mb-5 mt-6"><b>Vagas abertas</b></h1>
-                </div>
-            </div>
+    <div class="container">
+        <div class="text-center">
+            <h1 class="text-pink mb-5 mt-6"><b>Vagas abertas</b></h1>
         </div>
     </div>
 
-    <table class="container-table table table-bordered mb-5">
+    <table class="container-table table-hover table table-bordered mb-5">
         <thead>
             <tr>
-                <th scope="col"><h2 class="text-pink"><b>Área</b></h2></th>
-                <th scope="col"><h2 class="text-gray"><b>Vaga</b></h2></th>
+                <th scope="col"><h2 class="text-pink mt-2"><b>Área</b></h2></th>
+                <th scope="col"><h2 class="text-gray mt-2 px-5"><b>Vaga</b></h2></th>
+                <th scope="col"><h2 class="text-gray mt-2 px-5"><b></b></h2></th>
+                
             </tr>
         </thead>
         <tbody>
@@ -21,6 +19,7 @@
             <tr>
                 <td><%= jobs.area %></td>
                 <td><%= jobs.title %></td>
+                <td><a class="btn-secondary " target="__blank" href="jobdescription/<%=jobs.id%>">Veja mais</a></td>
             </tr>   
             <% }) %> 
         </tbody>

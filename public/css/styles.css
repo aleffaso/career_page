@@ -53,6 +53,7 @@
   --bs-pink-rgb: 255, 3, 100;
   --bs-dark-rgb: 25, 25, 25;
   --bs-gray-rgb: 102, 102, 102;
+  --bs-gray-light-rgb:172,172,172;
   --bs-black-rgb: 0, 0, 0;
   --bs-white-rgb: 255, 255, 255;
   --bs-white-rgb: 255, 255, 255;
@@ -651,6 +652,24 @@ progress {
   margin-left: auto;
 }
 
+.container-sm img{
+  width: auto; 
+  height: 400px;
+}
+
+.container-lg img{
+  height: 600px;
+}
+
+@media (max-width: 980px){
+  .container-sm img{
+    height: 200px;
+  }
+  .container-lg img{
+    height: 350px;
+  }
+}
+
 @media (min-width: 576px) {
   .container-sm, .container {
     max-width: 540px;
@@ -676,6 +695,90 @@ progress {
     max-width: 1320px;
   }
 }
+
+.container-pink{
+  display: grid;
+  text-align: center;
+  align-items: center;
+  background-color: rgba(244,51,101);
+  color: white;
+  height: 100%;
+  padding: 1rem 0rem;
+  border-radius: 30px; 
+}
+
+.container-light-pink{
+  display: grid;
+  text-align: center;
+  align-items: center;
+  background-color: rgba(253,230,239);
+  color: rgba(234,51,99);
+  height: 100%;
+  padding: 1rem 0rem;
+  border-radius: 30px; 
+}
+
+.container-light-pink img{
+  height: 100%;
+  margin: auto;
+}
+
+@media (max-width: 980px){
+  .container-light-pink img{
+    height: 80px;
+    width: auto;
+  }
+}
+
+.container-white{
+  background-color: white;
+  text-align: center;
+  color: gray;
+  height: 100%;
+  padding: 1rem;
+  box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
+  border-radius: 10px; 
+  font-size: 1.25rem;
+}
+
+.container-white img{
+  height: 150px;
+  margin: auto;
+}
+
+.container-beige{
+  display: inline-block;
+  background-color: rgba(244,243,243);
+  height: 100%;
+  padding: 3rem;
+  border-radius: 30px; 
+}
+
+.container-beige-text{
+  width: 296px;
+  height: 86px;
+}
+
+.container-card-logo{
+  display:inline;
+  width: 120px; 
+  height: auto;
+}
+
+.circular-landscape {
+  display: inline-block;
+  position: relative;
+  width: 190px;
+  height: 165px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.circular-landscape img {
+  width: auto;
+  height: 100%;
+  margin-left: -50px;
+}
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
@@ -692,6 +795,10 @@ progress {
   padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
+}
+
+.row img{
+  padding-bottom: 1rem;
 }
 
 .col {
@@ -1989,13 +2096,21 @@ progress {
   box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
 }
 .table > tbody {
-  vertical-align: inherit;
+  vertical-align: middle;
 }
 .table > thead {
   vertical-align: bottom;
 }
 .table > :not(:first-child) {
   border-top: 2px solid currentColor;
+}
+
+.container-table{
+  text-align: center;
+  background-color: rgba(244,243,243);
+  width: 60%;
+  height: 100%;
+  margin: auto;
 }
 
 .caption-top {
@@ -7511,6 +7626,10 @@ textarea.form-control-lg {
   margin-top: 1.5rem !important;
 }
 
+.mt-45 {
+  margin-top: 2rem !important;
+}
+
 .mt-5 {
   margin-top: 3rem !important;
 }
@@ -7848,6 +7967,14 @@ textarea.form-control-lg {
   font-size: 1rem !important;
 }
 
+.fs-7 {
+  font-size: 0.85rem !important;
+}
+
+.fs-8 {
+  font-size: 0.75rem !important;
+}
+
 .fst-italic {
   font-style: italic !important;
 }
@@ -7991,6 +8118,11 @@ textarea.form-control-lg {
 .text-gray {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-gray-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-gray-light {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-gray-light-rgb), var(--bs-text-opacity)) !important;
 }
 
 .text-pink {
@@ -11676,8 +11808,8 @@ body {
   position: relative;
   width: 100%;
   height: auto;
-  min-height: 35rem;
-  padding: 15rem 0;
+  min-height: 30rem;
+  padding: 9rem 0;
   background: #fff; 
   background-position: center;
   background-repeat: no-repeat;
@@ -11832,39 +11964,5 @@ body {
 }
 
 .footer {
-  padding: 10rem;
+  padding: 5rem 2rem;
 }
-
-.container-white{
-  background-color: white;
-  color: gray;
-  height: 100%;
-  padding: 1rem;
-  box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
-  border-radius: 10px; 
-  font-size: 1.25rem;
-}
-
-.container-white img{
-  width: auto;
-  height: 100px;
-}
-
-.container-beige{
-  display: grid;
-  background-color: rgba(244,243,243);
-  height: 100%;
-  padding: 3rem;
-  border-radius: 10px; 
-}
-
-.container-table{
-  text-align: center;
-  background-color: rgba(244,243,243);
-  width: 50%;
-  height: 100%;
-  margin: auto;
-  padding: 3rem 3rem;
-  border-radius: 10px; 
-}
-
