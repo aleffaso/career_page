@@ -3,32 +3,33 @@
 <!--Navbar-->
 <%- include("../partials/navbar_job.ejs") %>
 <br><br><br><br>
-<div class="container">
+<div class="container mb-4">
     <div class="card" id="form-quest">
-        <div class="card">
-            <div class="card-header">
-                <h3>Job description</h3>
-            </div>
-            <div class="card-body">
-                <form method="POST" action="/savejob">
-                    <label>Area</label>
-                    <input type="text" placeholder="Area" class="form-control" name="area">
-                    <br>
-                    <label>Title</label>
-                    <input type="text" placeholder="Title" class="form-control" name="title">
-                    <br>
-                    <label>Day</label>
-                    <input type="text" placeholder="Day" class="form-control" name="day">
-                    <br>
-                    <label>Abilities</label>
-                    <input type="text" placeholder="Title" class="form-control" name="ability">
-                    <br>
-                    <label>Difference</label>
-                    <input type="text" placeholder="Difference" class="form-control" name="difference">
-                    <br>
-                    <button class="btn btn-primary">Submit</button>
-                </form>
-            </div>
+        <div class="card-header">
+            <h3>Job description</h3>
+        </div>
+        <div class="card-body">
+            <form method="POST" action="/savejob">
+                <label>Area</label>
+                <input type="text" placeholder="Area" class="form-control" name="area">
+                <br>
+                <label>Title</label>
+                <input type="text" placeholder="Title" class="form-control" name="title">
+                <br>
+                <label>Day</label>
+                <input type="text" placeholder="Day" class="form-control" name="day">
+                <br>
+                <label>Abilities</label>
+                <input type="text" placeholder="Title" class="form-control" name="ability">
+                <br>
+                <label>Difference</label>
+                <input type="text" placeholder="Difference" class="form-control" name="difference">
+                <br>
+                <button class="btn btn-secondary">
+                    <h5><b>Submit</b></h5>
+                </button>
+
+            </form>
         </div>
     </div>
 </div>

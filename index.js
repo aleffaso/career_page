@@ -15,10 +15,12 @@ connection.authenticate()
 
  //Run EJS to render HTML
 app.set('view engine', 'ejs');
+//Render all css and js config
 app.use(express.static('public'));
 
-//Body parser to use partials
+//Body parser to use partials (as sent by html forms)
 app.use(bodyParser.urlencoded({extended: false}));
+//as sent by API clients
 app.use(bodyParser.json());
 
 //Use routes from config

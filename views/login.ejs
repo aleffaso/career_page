@@ -1,0 +1,30 @@
+<!--Header-->
+<%- include("partials/header.ejs") %>
+<!--Navbar-->
+<%- include("partials/navbar_job.ejs") %>
+<br><br><br><br>
+<div class="container-card-register mb-4">
+    <div class="card" id="form-quest">
+        <div class="card-header">
+            <h3>Login</h3>
+        </div>
+        <div class="card-body">
+            <form method="GET" action="">
+                <label>E-mail</label>
+                <input type="text" placeholder="E-mail" class="form-control" name="email">
+                <br>
+                <label>Senha</label>
+                <input type="password" placeholder="Senha" class="form-control" name="password">
+                <br>
+                <button class="btn-small-login btn-secondary">
+                    <p class="fs-5"><b>Acessar</b></p>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--Contact Information-->
+<%- include("sections/section06_footer.ejs") %>
+<!--Footer -->
+<%- include("partials/footer.ejs") %>
