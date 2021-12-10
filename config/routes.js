@@ -75,7 +75,7 @@ routes.get("/jobdescription/:id",(req,res) => { // Search for job by id
                 jobs: jobs //variable relating the database
             });
         }else{
-            res.redirect("/vagas"); //Redirect to vagas.ejs
+            res.redirect("/#apply"); //Redirect to vagas.ejs
         };
     });
 });
