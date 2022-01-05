@@ -11,11 +11,20 @@
 </p>
 <hr>
 
-## 1 - Libraries and Frameworks
+## 1 - Install dependencies
 
 - Clone repository: `git clone https://github.com/aleffaso/career_page.git `
 - Open the folder on `VSCode` or other coding software
 - Install dependencies running: `npm install`
+
+### Libraries
+- Bcrypt => secure password;
+- Dotenv => Hide keys;
+- Express => Flexible framework;
+- Express-Flash => Show error messages;
+- Express-Session => Logged area;
+- Method-Override => Delete logged session;
+- Passport-local => Locally logged; 
 <hr>
 
 ## 2 - Set Database on MySql
@@ -49,7 +58,6 @@
 
 ## 3 - Running the application
 
-- Run: `npm install`
 - Run: `nodemon index.js`
 - If everything works your database will show these columns below:
 

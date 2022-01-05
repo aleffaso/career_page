@@ -1,0 +1,38 @@
+<!--Header-->
+<%- include("../../partials/header.ejs") %>
+<!--Navbar-->
+<%- include("../../partials/navbar_job.ejs") %>
+<br><br><br><br>
+<div class="container-card-register mb-4">
+    <div class="card" id="form-quest">
+        <div class="card-header">
+            <h3>Cadastro</h3>
+        </div>
+        <div class="card-body">
+            <form method="POST" action="/users/update">
+                <label>Nome</label>
+                <input type="text" placeholder="Nome" class="form-control" name="name" value="<%= user.name %>" required>
+                <br>
+                <label>E-mail</label>
+                <input type="text" placeholder="E-mail" class="form-control" name="email" value="<%= user.email %>" required>
+                <br>
+                <label>Senha</label>
+                <input type="password" placeholder="Senha" class="form-control" name="password" required>
+                <br>
+                <label>Confirmar senha</label>
+                <input type="password" placeholder="Senha" class="form-control" name="confirmPassword" required>
+                <br>
+                <input type="hidden" name="id" value="<%=user.id %>"> <br>
+
+                <button type="submit" class="btn-small-login btn-secondary">
+                    <p class="fs-45"><b>Submit</b></p>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--Contact Information-->
+<%- include("../../sections/section06_footer.ejs") %>
+<!--Footer -->
+<%- include("../../partials/footer.ejs") %>

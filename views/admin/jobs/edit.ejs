@@ -1,0 +1,54 @@
+<!--Header-->
+<%- include("../../partials/header.ejs") %>
+<!--Navbar-->
+<%- include("../../partials/navbar_job.ejs") %>
+<br><br><br><br>
+<div class="container-card-register mb-4">
+    <div class="card" id="form-quest">
+        <div class="card-header">
+            <h3>Job description</h3>
+        </div>
+        <div class="card-body">
+            <form method="POST" action="/jobs/update">
+                <label>Area</label>
+                <input type="text" placeholder="Area" class="form-control" name="area" value="<%= jobs.area %>">
+                <br>
+                <label>Título</label>
+                <input type="text" placeholder="Título da vaga" class="form-control" name="title" value="<%= jobs.title %>">
+                <br>
+                <label>Dia a dia</label>
+                <textarea type="text" placeholder="Como será o dia a dia?" class="form-control" name="day" ><%= jobs.day %></textarea>
+                <br>
+                <label>Habilidades</label>
+                <textarea type="text" placeholder="Quais habilidades são importantes?" class="form-control" name="ability"><%= jobs.ability %></textarea>
+                <br>
+                <label>Diferencial</label>
+                <textarea type="text" placeholder="Diferenciais que contam" class="form-control" name="difference"><%= jobs.difference %></textarea>
+                <br>
+
+                <input type="hidden" name="id" value="<%=jobs.id %>">
+
+                <div class="text-center">
+                    <button type="submit" class="btn-job btn-warning">
+                        <b>Atualizar</b>
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--Contact Information-->
+<%- include("../../sections/section06_footer.ejs") %>
+<!--Footer -->
+<%- include("../../partials/footer.ejs") %>
+
+<script>
+    tinymce.init({
+        selector: "textarea",
+        plugins:
+            'advlist autolink link image lists print preview hr searchreplace wordcount fullscreen insertdatetime media save table paste emoticons ',
+        toolbar: "numlist bullist"
+    });
+</script>
