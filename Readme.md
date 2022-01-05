@@ -11,29 +11,24 @@
 </p>
 <hr>
 
-## 1 - Install dependencies
-
-- Clone repository: `git clone https://github.com/aleffaso/career_page.git `
-- Open the folder on `VSCode` or other coding software
-- Install dependencies running: `npm install`
 
 ### Libraries
 - Bcrypt => secure password;
 - Dotenv => Hide keys;
+- EJS => Render HTML;
 - Express => Flexible framework;
-- Express-Flash => Show error messages;
 - Express-Session => Logged area;
-- Method-Override => Delete logged session;
-- Passport-local => Locally logged; 
+- Nodemon => Update server;
+- Sequelize => Manipulate database;
 <hr>
 
-## 2 - Set Database on MySql
+## Set Database on MySql
 
 - As we use MySQL to build our data base, you can download it at this link if you don't have it already: 
 `https://dev.mysql.com/downloads/mysql/ ` 
 - Download `MySQL Workbench` at `https://www.mysql.com/products/workbench/`
 
-### 2.1 - Configure database
+### Configure database
 - After installing `WorkBench` click on `MySQL Connections`:
 
 <p align="center">
@@ -47,36 +42,38 @@
 </p> <br>
 
 - The name of the `new_schema` must be `jobdescription`
-<hr>
 
-- After installing MySQL don't forget to change `process.env.DATABASE_PASSWORD` with your `Root` credentials at `database/database.js`  as the picture below <br><br>
+### Configure env keys
+
+- Add `.env` file into main folder, and put:
+
+    - `DATABASE_PASSWORD = YourPassword`;
+    - `DATABASE_USER = root`;
+    - `DATABASE_TABLE = jobdescription`;
+    - `DATABASE_HOST = localhost`;
+    - `DATABASE_DIALECT = mysql`;
+    - `SESSION_SECRET = passwordSecret`;
 
 
-<p align="center">
-  <img  src="public/assets/src/img7.png">
-</p> <br>
+## Routes
 
-## 3 - Running the application
+    - localhost:3000/ => Main route;
+    - localhost:3000/login => Login route;
+    - localhost:3000/logout => Logout route;
+    - localhost:3000/jobs/:id => Job description route by id;
+<br>
 
-- Run: `nodemon index.js`
-- If everything works your database will show these columns below:
+  To access the routes below you need to login
 
-<p align="center">
-  <img  src="public/assets/src/img4.png">
-</p> <br>
+    - localhost:3000/admin/jobs => Job list route;
+    - localhost:3000/admin/jobs/new => Create job route;
+    - localhost:3000/admin/jobs/edit/:id => Edit job route by id;
+<br>
 
-- For testing you can go on `localhost:3000/`
-- There is this `createjob` route on `localhost:3000/createjob` to test your database and put all information in
+    - localhost:3000/admin/users => User list route;
+    - localhost:3000/admin/users/new => Create user route;
+    - localhost:3000/admin/users/edit/:id => Edit user route by id;
 
-<p align="center">
-  <img  style="width:400px;" src="public/assets/src/img5.png">
-</p> <br>
-
-- When you submit the job description, you will have something like this
-
-<p align="center">
-  <img  style="width:600px;" src="public/assets/src/img6.png">
-</p> <br>
 
 # About
 Start Bootstrap is an open source library of free Bootstrap themes and templates. All of the free themes and templates on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
