@@ -52,7 +52,7 @@
     - `DATABASE_TABLE = jobdescription`;
     - `DATABASE_HOST = localhost`;
     - `DATABASE_DIALECT = mysql`;
-    - `SESSION_SECRET = passwordSecret`;
+    - `SESSION_SECRET = secret`;
 
 
 ## Routes
