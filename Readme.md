@@ -47,12 +47,12 @@
 
 - Add `.env` file into main folder, and put:
 
-    - `DATABASE_PASSWORD = YourPassword`;
-    - `DATABASE_USER = root`;
-    - `DATABASE_TABLE = jobdescription`;
-    - `DATABASE_HOST = localhost`;
-    - `DATABASE_DIALECT = mysql`;
-    - `SESSION_SECRET = secret`;
+    - `DATABASE_PASSWORD = YourPassword`
+    - `DATABASE_USER = root`
+    - `DATABASE_TABLE = jobdescription`
+    - `DATABASE_HOST = localhost`
+    - `DATABASE_DIALECT = mysql`
+    - `SESSION_SECRET = secret`
 
 
 ## Routes
