@@ -719,13 +719,14 @@ progress {
 }
 
 .container-light-pink img{
-  height: 100%;
+  height: 75%;
   margin: auto;
 }
 
 @media (max-width: 980px){
   .container-light-pink img{
     height: 80px;
+    margin:auto;
     width: auto;
   }
 }
