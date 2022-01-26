@@ -24,7 +24,7 @@
             <tr>
                 <td><%= jobs.area %></td>
                 <td><%= jobs.title %></td>
-                <td><a href="/jobs/<%=jobs.id%>"><button class="btn=sm btn-success" >Visualizar</button></a></td>
+                <td><a href="<%=jobs.link%>"><button class="btn=sm btn-success" >Visualizar</button></a></td>
                 <form method="POST" action="/jobs/delete" onsubmit=deleteCheck(event,this)>
                     <input type="hidden" name="id" value="<%= jobs.id %>">
                     <td><button class="btn-sm btn-danger">Remover</button></td>

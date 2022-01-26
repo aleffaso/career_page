@@ -24,15 +24,17 @@ routes.get("/admin/jobs/new", adminAuth, (req,res) => {
 routes.post("/jobs/save", (req,res) => { //Saving the job descriptions related to index.ejs
     var area = req.body.area;
     var title = req.body.title;
-    var day = req.body.day;
-    var ability = req.body.ability;
-    var difference = req.body.difference; 
+    //var day = req.body.day;
+    //var ability = req.body.ability;
+    //var difference = req.body.difference; 
+    var link = req.body.link;
     Jobs.create({ //INSER INTO ..... + ..... SQL
         area: area,//Associated to database Job
         title: title, 
-        day: day,
-        ability: ability,
-        difference: difference
+        //day: day,
+        //ability: ability,
+        //difference: difference
+        link: link
     }).then(() => {
         res.redirect("/admin/jobs"); //Redirect to index.ejs
     });
@@ -80,11 +82,12 @@ routes.post("/jobs/update", adminAuth, (req,res) => {
     var id = req.body.id;
     var area = req.body.area;
     var title = req.body.title;
-    var day = req.body.day;
-    var ability = req.body.ability;
-    var difference = req.body.difference; 
+    //var day = req.body.day;
+    //var ability = req.body.ability;
+    //var difference = req.body.difference; 
+    var link = req.body.link;
 
-    Jobs.update({area: area, title: title, day: day, ability: ability, difference: difference},{ //Update by specified id
+    Jobs.update({area: area, title: title, link:link},{ //Update by specified id
         where: {
             id:id
         }

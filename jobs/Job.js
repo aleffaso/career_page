@@ -12,13 +12,17 @@ const Jobs = connection.define('jobs',{ //Create database with "Jobs" name
     },
     day:{
         type: Sequelize.TEXT,
-        allowNull: false
+        allowNull: true
     },
     ability:{
         type: Sequelize.TEXT,
-        allowNull: false
+        allowNull: true
     },
     difference:{
+        type: Sequelize.TEXT,
+        allowNull: true
+    },
+    link:{
         type: Sequelize.TEXT,
         allowNull: false
     }
