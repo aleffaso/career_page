@@ -24,24 +24,13 @@
 
 ## Set Database on MySql
 
-- As we use MySQL to build our data base, you can download it at this link if you don't have it already: 
-`https://dev.mysql.com/downloads/mysql/ ` 
-- Download `MySQL Workbench` at `https://www.mysql.com/products/workbench/`
+- Go into the terminal and type: `/usr/local/mysql/bin/mysql -u root -p`;
 
-### Configure database
-- After installing `WorkBench` click on `MySQL Connections`:
+- Put your root password
 
-<p align="center">
-  <img  src="public/assets/src/img2.png">
-</p> <br>
+- Create the data base: `CREATE DATABASE jobdescription;`
 
-- Then go on the top of the page and click on `Create new schema`
-
-<p align="center">
-  <img  src="public/assets/src/img3.png">
-</p> <br>
-
-- The name of the `new_schema` must be `jobdescription`
+- Exit from mysql:`exit`
 
 ### Configure env keys
 
